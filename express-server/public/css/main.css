@@ -1,0 +1,54 @@
+/* CSS Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+  background-color: #4caf50; /* Dark green background */
+  padding: 1rem; /* Padding around header */
+  color: white; /* White text */
+}
+
+header nav ul {
+  list-style: none; /* Remove list bullets */
+  display: flex; /* Display items horizontally */
+  gap: 1rem; /* Spacing between items */
+}
+
+header nav ul li a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffd700; /* Gold on hover */
+}
+
+/* Main content styling */
+main {
+  padding: 2rem; /* Space around main content */
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333; /* Dark gray color */
+}
+
+main p {
+  font-size: 1rem;
+  color: #555; /* Medium gray color */
+}
+
+/* Body styling */
+body {
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Default text color */
+  font-size: 16px;
+}

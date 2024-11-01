@@ -1,15 +1,20 @@
+const bodyParser = require("body-parser");
 const express = require("express");
-
+const path = require("path");
 const app = express();
+const shopRoutes = require("./routes/shop");
 
-app.use((req, res, next) => {
-  console.log("Middleware 1");
-  next();
-});
-app.use((req, res, next) => {
-  console.log("Middleware 2");
-  res.write("<body><h1>Hello World!</h1></body>");
-  next();
+const adminRoutes = require("./routes/admin");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
+
+app.use("/", (req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 app.listen(3030);
