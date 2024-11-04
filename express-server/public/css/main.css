@@ -1,54 +1,166 @@
-/* CSS Styling */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* Header styling */
-header {
-  background-color: #4caf50; /* Dark green background */
-  padding: 1rem; /* Padding around header */
-  color: white; /* White text */
-}
-
-header nav ul {
-  list-style: none; /* Remove list bullets */
-  display: flex; /* Display items horizontally */
-  gap: 1rem; /* Spacing between items */
-}
-
-header nav ul li a {
-  color: white; /* White text */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-  color: #ffd700; /* Gold on hover */
-}
-
-/* Main content styling */
-main {
-  padding: 2rem; /* Space around main content */
-}
-
-main h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333; /* Dark gray color */
-}
-
-main p {
-  font-size: 1rem;
-  color: #555; /* Medium gray color */
-}
-
-/* Body styling */
 body {
-  background-color: #f4f4f4; /* Light gray background */
-  color: #333; /* Default text color */
-  font-size: 16px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Main Header */
+.main-header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.main-header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main-header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid transparent;
+}
+
+.main-header nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+
+  padding: 1rem;
+  margin: 2rem auto;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Product Card */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__header {
+  padding: 1rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.product__title {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card__content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__content h2 {
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+.card__content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card__actions {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__actions button {
+  padding: 0.5rem 1.5rem;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card__actions button:hover {
+  background-color: #155cb0;
+}
+
+/* Form Container */
+form {
+  width: 300px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input[type="text"] {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+form input[type="text"]:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+form button {
+  padding: 0.75rem;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #155cb0;
+}
+.main-header nav ul li a.active {
+  border-bottom: 1px solid #fff;
+  border-radius: 0 !important;
 }

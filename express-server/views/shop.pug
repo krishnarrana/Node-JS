@@ -1,0 +1,22 @@
+extends layouts/main-layout.pug
+
+block content     
+    main 
+        if prods.length > 0
+            .grid 
+                each product in prods
+                    article.card.product-item
+                        header.card__header
+                            h1.product__title #{product.docTitle} 
+                        div.card__image
+                            img(src="https://placeholder.pics/svg/500", alt="", srcset="")
+                        div.card__content
+                            h2 $19.00
+                            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
+                        .card__actions 
+                            button Add to cart
+
+
+
+        else         
+            h2 No products       
